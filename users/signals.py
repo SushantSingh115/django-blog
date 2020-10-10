@@ -3,7 +3,7 @@ from django.contrib.auth.models import User
 from .models import Profile
 from django.dispatch import receiver
 
-
+#Signals to automatically create a profile for every new user
 @receiver(post_save, sender= User)
 def create_profile(sender,instance, created, **kwargs):
     if created:
