@@ -23,6 +23,7 @@ class PostList(ListView):
     template_name = 'blog/home.html'
     context_object_name = 'posts'
 
+
 class PostDetailView(LoginRequiredMixin, DetailView):
     model = Post
     template_name = 'blog/post-detail.html'
